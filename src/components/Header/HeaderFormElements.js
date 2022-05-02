@@ -20,7 +20,7 @@ export const Form = styled.form`
     border-bottom-left-radius: 16px;
   }
 
-  input:last-child ::placeholder {
+  input:last-child::placeholder {
     color: #bdbdbd;
     opacity: 1;
   }
