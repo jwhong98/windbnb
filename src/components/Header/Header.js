@@ -1,14 +1,14 @@
 import React from "react";
 import logo from "../../images/logo.svg";
 import { HeaderContainer, HeaderWrap } from "./HeaderElements";
-import HeaderForm from "./HeaderForm";
+import HeaderButtons from "./HeaderButtons";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <HeaderContainer>
       <HeaderWrap>
         <img src={logo} alt="logo" />
-        <HeaderForm />
+        <HeaderButtons onToggle={props.onToggle} />
       </HeaderWrap>
     </HeaderContainer>
   );

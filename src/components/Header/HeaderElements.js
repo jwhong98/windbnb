@@ -21,6 +21,7 @@ export const HeaderWrap = styled.div`
 
   img {
     align-self: flex-start;
+    cursor: pointer;
 
     @media screen and (min-width: 744px) {
       align-self: center;

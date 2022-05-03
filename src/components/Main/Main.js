@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 
 const Main = () => {
   const createCard = (info) => {
-    return <Card {...info} />;
+    return <Card key={info.id} {...info} />;
   };
   return (
     <MainContainer>

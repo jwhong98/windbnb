@@ -9,6 +9,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   font-size: 12px;
+  cursor: pointer;
 
   @media screen and (min-width: 744px) {
     font-size: 13px;
@@ -22,9 +23,14 @@ export const CardContainer = styled.div`
 export const CardImgWrap = styled.div`
   width: 100%;
 
+  @media screen and (min-width: 878px) {
+    /* min-width: 412px; */
+    /* height: 274.66px; */
+  }
+
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 24px;
   }
 `;
