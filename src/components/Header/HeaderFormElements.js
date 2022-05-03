@@ -8,14 +8,19 @@ export const Form = styled.form`
   border-radius: 16px;
 
   input {
-    width: 122px;
+    width: 106px;
     padding: 10px;
     border: none;
     outline: none;
     border-right: 1px solid #f2f2f2;
+
+    ::placeholder {
+      font-size: 14px;
+    }
   }
 
   input:first-child {
+    width: 138px;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
   }

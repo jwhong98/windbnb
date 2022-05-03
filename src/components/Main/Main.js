@@ -1,5 +1,5 @@
 import React from "react";
-import { MainContainer, MainWrap, MainHead } from "./MainElements";
+import { MainContainer, MainWrap, MainHead, CardWrap } from "./MainElements";
 import data from "../../stays.json";
 import Card from "../Card/Card";
 
@@ -14,7 +14,7 @@ const Main = () => {
           <h1>Stays in Finland</h1>
           <p>12+ stays</p>
         </MainHead>
-        {data.map(createCard)}
+        <CardWrap>{data.map(createCard)}</CardWrap>
       </MainWrap>
     </MainContainer>
   );

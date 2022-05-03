@@ -1,29 +1,37 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 350px;
+  /* min-width: 350px; */
+  /* max-width: 395px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 32px;
   font-size: 12px;
+
+  @media screen and (min-width: 744px) {
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 878px) {
+    font-size: 14px;
+  }
 `;
 
 export const CardImgWrap = styled.div`
   width: 100%;
-  height: 238.35px;
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 24px;
   }
 `;
 
 export const CardInfo = styled.div`
   width: 100%;
+  height: 28px;
   display: flex;
   align-items: center;
 `;
@@ -48,4 +56,12 @@ export const Title = styled.h1`
   font-size: 14px;
   font-weight: 600;
   color: #333333;
+
+  @media screen and (min-width: 744px) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: 878px) {
+    font-size: 16px;
+  }
 `;

@@ -15,7 +15,15 @@ export const HeaderWrap = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media screen and (min-width: 744px) {
+    flex-direction: row;
+  }
+
   img {
     align-self: flex-start;
+
+    @media screen and (min-width: 744px) {
+      align-self: center;
+    }
   }
 `;
