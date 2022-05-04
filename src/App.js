@@ -9,10 +9,18 @@ function App() {
   const onToggle = () => {
     setIsOpen(!isOpen);
   };
+  const [location, setLocation] = useState("Helsinki, Finland");
+
   return (
     <>
-      {isOpen && <MenuModal onToggle={onToggle} />}
-      <Header onToggle={onToggle} />
+      {isOpen && (
+        <MenuModal
+          onToggle={onToggle}
+          location={location}
+          setLocation={setLocation}
+        />
+      )}
+      <Header onToggle={onToggle} location={location} />
       <Main />
     </>
   );

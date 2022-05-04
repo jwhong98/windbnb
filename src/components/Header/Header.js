@@ -8,7 +8,7 @@ const Header = (props) => {
     <HeaderContainer>
       <HeaderWrap>
         <img src={logo} alt="logo" />
-        <HeaderButtons onToggle={props.onToggle} />
+        <HeaderButtons onToggle={props.onToggle} location={props.location} />
       </HeaderWrap>
     </HeaderContainer>
   );

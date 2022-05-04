@@ -12,9 +12,14 @@ import {
 
 const MenuModal = (props) => {
   const [selected, setSelected] = useState("");
+
   const selectHandler = (e) => {
     setSelected(e.target.value);
-    console.log(selected);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    props.onToggle();
   };
   const portalElement = document.getElementById("overlay");
   return (
@@ -30,7 +35,7 @@ const MenuModal = (props) => {
             <ModalSelect>
               <button value="location" onClick={selectHandler}>
                 <span>LOCATION</span>
-                <p>Helsinki, Finland</p>
+                <p>{props.location}</p>
               </button>
               <button value="guest" className="guests" onClick={selectHandler}>
                 <span>GUESTS</span>
@@ -38,10 +43,12 @@ const MenuModal = (props) => {
               </button>
             </ModalSelect>
             <SelectedDisplay>
-              {selected === "location" && <LocationSelect />}
+              {selected === "location" && (
+                <LocationSelect setLocation={props.setLocation} />
+              )}
               {selected === "guest" && <GuestSelect />}
             </SelectedDisplay>
-            <button className="search" type="submit" onClick={props.onToggle}>
+            <button className="search" type="submit" onClick={submitHandler}>
               <ion-icon name="search"></ion-icon> Search
             </button>
           </ModalContainer>
