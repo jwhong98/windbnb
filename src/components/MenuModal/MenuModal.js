@@ -39,14 +39,16 @@ const MenuModal = (props) => {
               </button>
               <button value="guest" className="guests" onClick={selectHandler}>
                 <span>GUESTS</span>
-                <p>Add guests</p>
+                <p>{props.guests > 0 ? props.guests : "Add"} guests</p>
               </button>
             </ModalSelect>
             <SelectedDisplay>
               {selected === "location" && (
                 <LocationSelect setLocation={props.setLocation} />
               )}
-              {selected === "guest" && <GuestSelect />}
+              {selected === "guest" && (
+                <GuestSelect setGuests={props.setGuests} />
+              )}
             </SelectedDisplay>
             <button className="search" type="submit" onClick={submitHandler}>
               <ion-icon name="search"></ion-icon> Search

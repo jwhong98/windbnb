@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GuestContainer } from "./GuestSelectElements";
 
-const GuestSelect = () => {
+const GuestSelect = (props) => {
   const [adultCount, setAdultCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
+
+  useEffect(
+    () => props.setGuests(adultCount + childCount),
+    [adultCount, childCount]
+  );
 
   const addHandler = (e) => {
     if (e.target.dataset.age === "adult") {
@@ -11,6 +16,7 @@ const GuestSelect = () => {
     } else {
       setChildCount(childCount + 1);
     }
+    // props.setGuests(adultCount + childCount);
   };
 
   const removeHandler = (e) => {
@@ -19,6 +25,7 @@ const GuestSelect = () => {
     } else if (childCount > 0) {
       setChildCount(childCount - 1);
     }
+    // props.setGuests(adultCount + childCount);
   };
   return (
     <GuestContainer>
