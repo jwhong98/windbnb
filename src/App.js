@@ -9,7 +9,7 @@ function App() {
   const onToggle = () => {
     setIsOpen(!isOpen);
   };
-  const [location, setLocation] = useState("Helsinki, Finland");
+  const [location, setLocation] = useState("Helsinki");
   const [guests, setGuests] = useState(0);
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
         />
       )}
       <Header onToggle={onToggle} location={location} guests={guests} />
-      <Main />
+      <Main location={location} guests={guests} />
     </>
   );
 }

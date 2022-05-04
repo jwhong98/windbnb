@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MainContainer, MainWrap, MainHead, CardWrap } from "./MainElements";
 import data from "../../stays.json";
 import Card from "../Card/Card";
 
-const Main = () => {
+const Main = (props) => {
+  const allListings = data;
+  const [filteredList, setfilteredList] = useState(allListings);
+
+  useEffect(() => {
+    setfilteredList(
+      allListings.filter((listing) => listing.city === props.location)
+    );
+  }, [allListings, props.location]);
+
   const createCard = (info) => {
     return <Card key={info.id} {...info} />;
   };
@@ -12,9 +21,9 @@ const Main = () => {
       <MainWrap>
         <MainHead>
           <h1>Stays in Finland</h1>
-          <p>12+ stays</p>
+          <p>{filteredList.length > 12 ? "12+" : filteredList.length} stays</p>
         </MainHead>
-        <CardWrap>{data.map(createCard)}</CardWrap>
+        <CardWrap>{filteredList.map(createCard)}</CardWrap>
       </MainWrap>
     </MainContainer>
   );

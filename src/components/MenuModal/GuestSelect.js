@@ -5,6 +5,7 @@ const GuestSelect = (props) => {
   const [adultCount, setAdultCount] = useState(0);
   const [childCount, setChildCount] = useState(0);
 
+  //temporary solution
   useEffect(
     () => props.setGuests(adultCount + childCount),
     [adultCount, childCount]
