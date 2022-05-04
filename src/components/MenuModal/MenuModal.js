@@ -41,7 +41,7 @@ const MenuModal = (props) => {
               {selected === "location" && <LocationSelect />}
               {selected === "guest" && <GuestSelect />}
             </SelectedDisplay>
-            <button className="search" type="submit">
+            <button className="search" type="submit" onClick={props.onToggle}>
               <ion-icon name="search"></ion-icon> Search
             </button>
           </ModalContainer>

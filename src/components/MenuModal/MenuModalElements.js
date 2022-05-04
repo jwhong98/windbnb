@@ -59,6 +59,7 @@ export const ModalHead = styled.div`
   }
   ion-icon {
     font-size: 20px;
+    cursor: pointer;
   }
 `;
 

@@ -27,6 +27,10 @@ export const ButtonWrap = styled.div`
     border-bottom-left-radius: 16px;
   }
 
+  .guests {
+    color: #bdbdbd;
+  }
+
   .search {
     width: 53px;
     padding: 10px;
