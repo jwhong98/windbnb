@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainContainer = styled.main`
   padding: 0 20px;
   margin-top: 37px;
+  margin-bottom: 5rem;
 `;
 
 export const MainWrap = styled.div`

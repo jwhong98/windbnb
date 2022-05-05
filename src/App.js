@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import MenuModal from "./components/MenuModal/MenuModal";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       )}
       <Header onToggle={onToggle} location={location} guests={guests} />
       <Main location={location} guests={guests} />
+      <Footer />
     </>
   );
 }
