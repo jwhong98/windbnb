@@ -35,7 +35,11 @@ const MenuModal = (props) => {
             <ModalSelect>
               <button value="location" onClick={selectHandler}>
                 <span>LOCATION</span>
-                <p>{props.location}, Finland</p>
+                <p>
+                  {props.location === ""
+                    ? "Add location"
+                    : `${props.location}, Finland`}
+                </p>
               </button>
               <button value="guest" className="guests" onClick={selectHandler}>
                 <span>GUESTS</span>

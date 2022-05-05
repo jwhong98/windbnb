@@ -8,9 +8,13 @@ const Main = (props) => {
   const [filteredList, setfilteredList] = useState(allListings);
 
   useEffect(() => {
-    setfilteredList(
-      allListings.filter((listing) => listing.city === props.location)
-    );
+    if (props.location === "") {
+      setfilteredList(allListings);
+    } else {
+      setfilteredList(
+        allListings.filter((listing) => listing.city === props.location)
+      );
+    }
   }, [allListings, props.location]);
 
   const createCard = (info) => {

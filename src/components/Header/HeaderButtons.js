@@ -4,7 +4,9 @@ import { ButtonWrap } from "./HeaderButtonsElements";
 const HeaderButtons = (props) => {
   return (
     <ButtonWrap onClick={props.onToggle}>
-      <button>{props.location}, Finland</button>
+      <button>
+        {props.location === "" ? "Add location" : `${props.location}, Finland`}
+      </button>
       <button className="guests">
         {props.guests > 0 ? props.guests : "Add"} guests
       </button>

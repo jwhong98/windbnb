@@ -9,7 +9,7 @@ function App() {
   const onToggle = () => {
     setIsOpen(!isOpen);
   };
-  const [location, setLocation] = useState("Helsinki");
+  const [location, setLocation] = useState("");
   const [guests, setGuests] = useState(0);
   return (
     <>

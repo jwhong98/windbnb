@@ -22,10 +22,12 @@ export const CardContainer = styled.div`
 
 export const CardImgWrap = styled.div`
   width: 100%;
+  border-radius: 24px;
 
   @media screen and (min-width: 878px) {
     /* min-width: 412px; */
-    /* height: 274.66px; */
+    max-height: 274.66px;
+    overflow: hidden;
   }
 
   img {
